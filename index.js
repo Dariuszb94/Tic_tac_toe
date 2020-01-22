@@ -99,6 +99,7 @@ class Game extends React.Component {
     let status;
     if (winner) {
       status = "Winner: " + winner;
+
     } else {
       status = "Next player: " + (this.state.xIsNext ? "X" : "O");
     }
@@ -112,7 +113,7 @@ class Game extends React.Component {
 
 
       React.createElement("div", { className: "game-info" },
-      React.createElement("div", null, status),
+      React.createElement("div",{ id: "status-info" }, status),
       React.createElement("ol", null, moves))));
 
 
